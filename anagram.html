@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="str1" >
+	<br>
+	<input type="text" id="str2" >
+	<br>
+	<input type="button" id="btn" value="Check for Anagram">
+</body>
+	<script type="text/javascript">
+	var regex = /[^a-z0-9]/gi;
+	document.getElementById('btn').addEventListener('click', function(){
+		var str1 = (document.getElementById('str1').value).replace(regex, '');
+		var str2 = (document.getElementById('str2').value).replace(regex, '');
+
+		if((str1.length === str2.length) && (str1.toLowerCase().split('').sort().join('')) === (str2.toLowerCase().split('').sort().join(''))){
+			alert("Is an Anagram");
+
+		}
+		else{
+			alert("Not an Anagram");
+		}
+
+	});
+
+
+		
+	</script>
+</html>

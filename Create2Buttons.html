@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="newButton">
+	<button class="btn">Head</button>
+</div>
+</body>
+	<script type="text/javascript">
+		$(".btn").on("click", function(){
+			$(this).remove();
+			$('.newButton').append('<button class="btn">Head1</button>');
+		});
+	</script>
+</html>

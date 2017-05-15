@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="str">
+	<br>
+	<input type="button" id="btn1" value="reverseString">
+	<input type="button" id="btn2" value="reverseSentence">
+	<input type="button" id="btn3" value="reverseWordSentence">
+</body>
+	<script type="text/javascript">
+	document.getElementById('btn1').addEventListener('click', function(){
+			var str = document.getElementById('str').value;
+			var strRev = '';
+			for(var i=str.length-1; i>=0; i--){
+				strRev += str[i];
+			}
+			alert(strRev);
+		});
+		document.getElementById('btn2').addEventListener('click', function(){
+			var str = (document.getElementById('str').value).split(" ").reverse().join(" ");
+			alert(str);
+		});
+		document.getElementById('btn3').addEventListener('click', function(){
+			var str = (document.getElementById('str').value).split(' ');
+
+			str.map(function(item,index) {
+				
+				var strRev = '';
+				for(var i=item.length-1; i>=0; i--){
+				strRev += item[i];
+				}
+				item = strRev;
+				//alert("item " + item );
+				str[index] = item;
+			});
+			alert(str.join(" "));
+		});
+
+		/*
+		document.getElementById('btn3').addEventListener('click', function(){
+			var str = document.getElementById('str').value;
+			var strRev = '';
+			for(var i=str.length-1; i>=0; i--){
+				strRev += str[i];
+			}
+			alert(strRev.split('').reverse().join(''));
+		});*/
+
+
+	</script>
+</html>
